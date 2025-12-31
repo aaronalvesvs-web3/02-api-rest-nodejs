@@ -2,7 +2,7 @@ import setupKnex, { type Knex } from 'knex'
 import { env } from './env/index.js'
 
 export const config: Knex.Config = {
-  client: 'env.DATABASE_CLIENT',
+  client: env.DATABASE_CLIENT,
   connection:
     env.DATABASE_CLIENT === 'sqlite'
       ? {
